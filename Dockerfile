@@ -27,6 +27,7 @@ RUN service postgresql start && sudo -u postgres psql -U postgres -d postgres -c
   python3 /opt/netbox/netbox/manage.py collectstatic --no-input
 
 ADD start-services.sh /root/start-services.sh
+RUN chmod +x /root/start-services.sh
 
 CMD /root/start-services.sh
 
