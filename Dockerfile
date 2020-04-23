@@ -7,10 +7,10 @@ RUN apt-get update && apt-get -y install python3 python3-dev \
   wget vim nano joe htop net-tools iputils-ping traceroute socat mtr host iperf3 curl iproute2 tcpdump telnet
 RUN easy_install3 pip
 
-RUN wget https://github.com/digitalocean/netbox/archive/v2.3.3.tar.gz && tar xzf v2.3.3.tar.gz -C /opt
+RUN wget https://github.com/netbox-community/netbox/archive/v2.8.0.tar.gz && tar xzf v2.8.0.tar.gz -C /opt
 
-RUN ln -s /opt/netbox-2.3.3 /opt/netbox
-RUN cd /opt/netbox-2.3.3 && pip3 install -r requirements.txt
+RUN ln -s /opt/netbox-2.8.0 /opt/netbox
+RUN cd /opt/netbox-2.8.0 && pip3 install -r requirements.txt
 
 RUN pip3 install napalm
 
