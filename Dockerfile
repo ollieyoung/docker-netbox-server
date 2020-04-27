@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get -y install python3 python3-dev \
   python3-setuptools build-essential libxml2-dev libxslt1-dev libffi-dev \
