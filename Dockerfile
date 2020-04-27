@@ -1,6 +1,9 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get -y install python3 python3-dev \
+RUN apt-get update && apt-get install -y tzdata
+CMD date
+
+RUN apt-get -y install python3 python3-dev \
   python3-setuptools build-essential libxml2-dev libxslt1-dev libffi-dev \
   graphviz libpq-dev libssl-dev zlib1g-dev ca-certificates \
   postgresql postgresql-client sudo \
